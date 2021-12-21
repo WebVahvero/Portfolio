@@ -15,16 +15,43 @@ html {
     color: var(--high-contrast-primary-color);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, a, button {
     font-family: 'Ubuntu Mono', monospace;
 }
 
 /* COLORS */
 :root {
-    --primary-color: #051405;
+    --primary-color: #071b07;
     --high-contrast-primary-color: #e2fde3;
-    --secondary-color: #056108;
+    --secondary-color: #051105;
+    --third-color: #074b07;
 }
+
+/* BUTTON */
+button {
+    border: none;
+    background-color: none;
+}
+
+a.btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--third-color);
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 200ms;
+    color: var(--secondary-color);
+    pointer-events: fill;
+    border-radius: 5px;
+  }
+  
+  a.btn:hover,
+  a.btn:focus {
+    box-shadow: 5px 5px var(--high-contrast-primary-color);
+    color: var(--high-contrast-primary-color);
+    transition: 500ms;
+    text-shadow: 2px 2px #000000;
+  }
 
 /* PAGE LAYOUT*/
 body {
@@ -64,6 +91,10 @@ a {
     color: var(--high-contrast-primary-color);
 }
 
+.language li {
+    margin: 0 5px;
+}
+
 span {
     color: var(--high-contrast-primary-color);
 }
@@ -72,18 +103,18 @@ span {
     background-color: var(--high-contrast-primary-color);
     text-align: center;
     color: var(--primary-color);
-    padding-top: 1px;
+    padding: 2px 2px 0 2px;
 }
 
 .logo-bottom {
     border: 2px solid var(--high-contrast-primary-color);
-    padding-bottom: 1px;
+    padding: 2px 0;
 }
 
 .logo-bottom h2 {
-    letter-spacing: 21px;
     line-height: 0.8;
-    margin-left: 20px;
+    text-align: center;
+    letter-spacing: 4.8px;
     color: var(--high-contrast-primary-color);
 }
 
@@ -123,11 +154,23 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(0deg, rgba(5, 20, 5, 0.3), rgba(5, 20, 5, 0.3)), url(icons/forest.jpg );
+    background-image: linear-gradient(0deg, rgba(5, 20, 5, 0.3), rgba(5, 20, 5, 0.3)), url(img/IMG_20210602_000547.jpg );
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 50vh;
+}
+
+.hero-title-top {
+    margin-left: -30px;
+}
+
+.hero-title-bottom {
+    margin-left: 50px;
+}
+
+.hero-title-bottom h1 {
+    font-size: 3.5rem;
 }
 
 h1 {
@@ -136,14 +179,74 @@ h1 {
     text-shadow: 5px 5px #000000;
 }
 
-/* STUFF SECTION */
-.stuff {
+/* ABOUT SECTION */
+section.about {
+    margin: 50px 0;
     display: flex;
     flex-direction: column;
 }
 
-.stuff-title {
-    margin: 100px 0 50px 0;
+.about-heading {
+    display: inline-flex;
+    flex-direction: row;
+    margin: 10px 20px;
+}
+
+aside.about-text{
+    width: 60%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside.about-text h3{
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+figure.about-avatar {
+    width: 40%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+figure.about-avatar img {
+    width: 130px;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid var(--high-contrast-primary-color);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article h4 {
+    font-size: 1.4rem;
+    margin: 20px;
+}
+
+button.grades-btn {
+    margin: 30px 0 10px 0;
+}
+
+article {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+}
+
+/* SKILLS SECTION */
+.skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-title {
+    margin: 50px 0;
     text-align: center;
 }
 
@@ -152,7 +255,7 @@ h3 {
     letter-spacing: 10px;
 }
 
-.stuff-content {
+.skills-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -230,26 +333,6 @@ h3 {
     left: 10px;
     transition: 800ms;
   }
-
-section.about {
-    margin: 80px 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.about-title {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-article {
-    background-color: var(--primary-color);
-    border: 5px solid var(--high-contrast-primary-color);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
-    text-align: center;
-}
 
 /* FOOTER */
 footer {

@@ -4,34 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid2</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="mobileMenu.js"></script>
+    <script src="typewriter.js" defer></script>
 </head>
-<body>
+<body onload="typeWriter()">
     <header>
         <div class="header-top">
             <a href="#hero">
                 <div class="logo">
                     <div class="logo-top">
-                        <h4>Muiskismaiskis</h4>
+                        <h4>Valtteri Kurunsaari</h4>
                     </div>
                     <div class="logo-bottom">
-                        <h2>GRID</h2>
+                        <h2>Portfolio</h2>
                     </div>
                 </div>
             </a>
             <nav>
                 <ul>
-                    <li><a href="#stuff">Stuff</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#about">Minusta</a></li>
+                    <li><a href="#skills">Osaaminen</a></li>
+                    <li><a href="#">Projektit</a></li>
                 </ul>
             </nav>
             <div class="language">
                 <ul>
                     <li><a href="">FIN</a></li>
-                    <span>/</span>
+                    <span>|</span>
                     <li><a href="">Eng</a></li>
                 </ul>
             </div>
@@ -41,24 +43,60 @@
         </div>
         <div class="header-bottom hide-menu">
             <div class="mobile-menu">
-                <a id="mItem" href="#stuff">Stuff</a>
-                <a id="mItem" href="#about">About</a>
-                <a id="mItem" href="#stuff">Stuff</a>
-                <a id="mItem" href="#about">About</a>               
+                <a id="mItem" href="#about">Minusta</a>
+                <a id="mItem" href="#skills">Osaaminen</a>
+                <a id="mItem" href="#">Projektit</a>
             </div>
         </div>
     </header>
     <main>
         <section id="hero" class="hero">
             <div class="hero-title">
-                <h1>Grid Internetti</h1>
+                <div class="hero-title-top">
+                    <h1 id="top-title"></h1>
+                </div>
+                <div class="hero-title-bottom">
+                    <h1 id="bottom-title"></h1>
+                </div>
             </div>
         </section>
-        <section id="stuff" class="stuff">
-            <div class="stuff-title">
+        <section id="about" class="about">
+            <div class="about-heading">
+                <aside class="about-text">
+                    <h3>Tervetuloa ja kiitos, että päätit vierailla Portfoliosivustollani.</h3>
+                </aside>
+                <figure class="about-avatar">
+                    <img src="img/valtsu-ilmantausta.png" alt="Valtteri Kurunsaari">
+                </figure>
+            </div>
+            <div class="about-articles">
+                <article class="aboutme">
+                    <h4>Tässä hieman minusta</h4>
+                    <p>Olen 24-vuotias ja opiskelen tällähetkellä Vaasan Ammattikorkeakoulussa Tietojenkäsittelyä</p>
+                    <br>
+                    <p>Kiinnostukseni kohteisiin kuuluu erityisesti verkkosivustojen ja -ohjelmistojen kehitys, sekä niiden suunnittelu</p>
+                    <br>
+                    <p>Työkokemusta minulta löytyy muutama vuosi ravintola-alalta, mutta kokemusta IT-alalla työskentelystä minulla on vain työharjoittelusta, jota suoritan tällähetkellä</p>
+                    <br>
+                    <p>Vapaa-aikaani vietän mielelläni omien koodaus/ohjemlointi projektien ja liikunnan parissa. Pidän myös paljon erillaisten ruokien ja leivonnaisten valmistamisesta</p>
+                </article>
+                <article class="aboutschool">
+                    <h4>Koulutus</h4>
+                    <p>Vaasan ammattikorkeakoulu,<br>Tietojenkäsittelyn tradenomi,AMK <br>(03.09.2019 - jatkuu)</p>
+                    <br>
+                    <br>
+                    <p>Koulutuskeskus Sedu Lapua,<br>Hotelli-, Ravintola- ja Catering -alan perustutkinto<br>(12.08.2013 - 18.12.2015)</p>
+                    <button class="grades-btn">
+                        <a class="btn" href="#" target="_blank">Katso arvosanani</a>
+                    </button>
+                </article>
+            </div>
+        </section>
+        <section id="skills" class="skills">
+            <div class="skills-title">
                 <h3>Stuff</h3>
             </div>
-            <div class="stuff-content">
+            <div class="skills-content">
                 <div class="box">
                     <div class="back-box">
                       <div class="icons">
@@ -86,16 +124,6 @@
                     </div>
                   </div>
             </div>
-        </section>
-        <section id="about" class="about">
-            <div class="about-title">
-                <h3>About</h3>
-            </div>
-            <article>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aspernatur cumque praesentium neque obcaecati distinctio nihil fugiat, repellendus harum ut omnis eveniet ipsa inventore earum corporis expedita perspiciatis explicabo maxime consequuntur, voluptatem accusantium voluptatum veniam. Modi numquam dolore fugit quidem earum suscipit voluptatibus aperiam quam ex vero. Dolores sequi blanditiis, quis enim nostrum nesciunt incidunt numquam sint magni, voluptate suscipit reiciendis eveniet.</p>
-                <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur fugit sint perferendis, velit distinctio debitis, deserunt ipsum nihil recusandae blanditiis fugiat dolorum accusamus! Sit enim provident pariatur, consectetur aperiam dicta! Est, perferendis. Rem saepe voluptatem quia unde a illum assumenda facere autem? Incidunt?</p>
-            </article>
         </section>
     </main>
     <footer>
