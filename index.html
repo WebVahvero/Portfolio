@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="mobileMenu.js"></script>
     <script src="typewriter.js" defer></script>
+    <script src="tab.js" defer></script>
 </head>
 <body onload="typeWriter()">
     <header>
@@ -90,6 +91,45 @@
                         <a class="btn" href="#" target="_blank">Katso arvosanani</a>
                     </button>
                 </article>
+                <div class="workTab">
+                    <div class="tab">
+                        <button class="tablinks" onclick="openWork(event, 'Powerpark')" id="defaultOpen">Powerpark</button>
+                        <button class="tablinks" onclick="openWork(event, 'OperaGrill')">OperaGrill</button>
+                        <button class="tablinks" onclick="openWork(event, 'Rosso')">Rosso</button>
+                        <button class="tablinks" onclick="openWork(event, 'Pancho')">Pancho Villa</button>
+                        <button class="tablinks" onclick="openWork(event, 'WebAula')">WebAula</button>
+                    </div>                          
+                    <div id="Powerpark" class="tabcontent">
+                        <h5>Powerpark</h5>
+                        <p>Työskentelin ravintolakokkina huvipuisto Powerparkin ravintoloissa</p>
+                        <br>
+                        <p>Tehtävänä yrityksessä oli a la carte ja lounas ruokien valmistus ja keittiön tavanomaiset työt</p>
+                    </div>                         
+                    <div id="OperaGrill" class="tabcontent">
+                        <h5>OperaGrill</h5>
+                        <p>Työskentelin Savolinnan OperaGrillissä kahtena kesänä vuosina 2017 ja 2018</p>
+                        <br>
+                        <p>Tehtävänä yrityksessä oli a la carte annosten valmistaminen ja keittiön tavanomaiset työt</p>
+                    </div>                        
+                    <div id="Rosso" class="tabcontent">
+                        <h5>Rosso</h5>
+                        <p>Työskentelin yrityksessä määräaikaisena työntekijänä vuosina 2017, 2018 ja 2019</p>
+                        <br>
+                        <p>Tehtävänä yrityksessä oli a la carte annosten valmistaminen ja keittiön tavanomaiset työt</p>
+                    </div>
+                    <div id="Pancho" class="tabcontent">
+                        <h5>Pancho Villa</h5>
+                        <p>Olin töissä Pancho Villassa alkuvuoden ja kesän 2021</p>
+                        <br>
+                        <p>Tehtävänä yrityksessä oli annosten kuten hampurilaisten ja meksikolaistyylisten annosten valmistaminen ja keittiön tavanomaiset työt</p>
+                    </div>
+                    <div id="WebAula" class="tabcontent">
+                        <h5>WebAula</h5>
+                        <p>Työharjoittelijana WebAulalla 13.9.2021 - 17.2.2022</p>
+                        <br>
+                        <p>Ensimmäinen IT-alan työ. Tehtävänä yrityksessä Wordpress sivustojen rakentaminen asiakas yrityksille</p>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="skills" class="skills">
@@ -112,14 +152,9 @@
                       </div>
                       <div class="front-box">
                         <h4>Backend teknologiat</h4>
-                        <p>
-                          Dynaamisuuta luon sivustoille käyttäen
-                          PHPta, joka on minulle tutuin palvelinpuolen skriptikieli.
-                          <br>
-                          <br>
-                          Tietokantoja olen rakentanut käyttäen
-                          MySql tietokantaa.
-                        </p>
+                        <p>Dynaamisuuta luon sivustoille käyttäen PHPta, joka on minulle tutuin palvelinpuolen skriptikieli.</p>
+                        <br>
+                        <p>Tietokantoja olen rakentanut käyttäen MySql tietokantaa.</p>
                       </div>
                     </div>
                   </div>
