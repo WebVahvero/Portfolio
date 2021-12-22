@@ -3,7 +3,7 @@
    height="24px"
    viewBox="0 0 24 24"
    width="24px"
-   fill="#000000"
+   fill="#D0DDFB"
    version="1.1"
    id="svg838"
    sodipodi:docname="menu_black_24dp.svg"
@@ -17,7 +17,7 @@
   <sodipodi:namedview
      id="namedview840"
      pagecolor="#505050"
-     bordercolor="#eeeeee"
+     bordercolor="#D0DDFB"
      borderopacity="1"
      inkscape:pageshadow="0"
      inkscape:pageopacity="0"
@@ -39,5 +39,5 @@
   <path
      d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
      id="path836"
-     style="fill:#e2fde3;fill-opacity:1" />
+     style="fill:#D0DDFB;fill-opacity:1" />
 </svg>

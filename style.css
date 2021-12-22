@@ -194,7 +194,6 @@ section.about {
 }
 
 aside.about-text{
-    width: 60%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -203,17 +202,17 @@ aside.about-text{
 aside.about-text h3{
     font-size: 1.1rem;
     letter-spacing: 1px;
+    text-align: left;
 }
 
 figure.about-avatar {
-    width: 40%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
 }
 
 figure.about-avatar img {
-    width: 130px;
+    width: 90%;
     height: 100%;
     background-color: transparent;
     border: 2px solid var(--high-contrast-primary-color);
@@ -221,6 +220,7 @@ figure.about-avatar img {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    padding: 0 20px 5px 20px;
 }
 
 article h4 {
@@ -328,55 +328,24 @@ h3 {
     justify-content: center;
 }
 
+.box {
+    margin-bottom: 70px;
+}
+
 .back-box {
     width: 80vw;
-    height: 250px;
+    height: 400px;
     background-color: var(--high-contrast-primary-color);
     border-radius: 10px;
     position: relative;
     overflow: visible;
     box-shadow: 10px 11px 4px 0px rgba(0, 0, 0, 0.31);
     border: 3px solid #00081a;
-  }
-  
-  .icons {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    left: 40px;
-    top: -25px;
-  }
-  
-  .icon {
-    opacity: 0;
-    width: 50px;
-    height: 50px;
-    background-color: var(--high-contrast-primary-color);
-    border-radius: 50%;
-    margin: 0 5px;
-    border: 4px solid var(--primary-color);
-    transition: 500ms;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .box:hover .icon,
-  .box:focus .icon {
-    opacity: 1;
-    transition: 800ms;
-  }
+}
 
-  .front-box h4 {
-    font-size: 1.6rem;
-    letter-spacing: 5px;
-    text-align: center;
-  }
-  
-  .front-box {
+.front-box {
     width: 80vw;
-    height: 250px;
+    height: 400px;
     background-color: var(--secondary-color);
     border-radius: 10px;
     padding: 20px 40px;
@@ -391,14 +360,97 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-  }
-  
-  .box:hover .front-box,
-  .box:focus .front-box {
+}
+
+.taptap {
+    width: 30px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    animation-name: tap;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes tap {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.taptap img {
+    transform: rotateZ(-20deg);
+}
+
+/* Height settings */
+#backend {
+    height: 300px;
+}
+
+#wordpress,
+#git {
+    height: 200px;
+}
+
+#basics {
+    height: 450px;
+}
+
+.box:hover .front-box,
+.box:focus .front-box {
     top: 30px;
     left: 10px;
     transition: 800ms;
-  }
+}
+
+.icons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 40px;
+    top: -25px;
+}
+
+.icon {
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    background-color: var(--high-contrast-primary-color);
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 3px solid var(--secondary-color);
+    transition: 500ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon img {
+    width: 25px;
+}
+
+#backend .icon img {
+    width: 40px;
+}
+
+.wordpress img, 
+#git .icons .icon img {
+    width: 35px;
+}
+
+.box:hover .icon,
+.box:focus .icon {
+    opacity: 1;
+    transition: 800ms;
+}
+
+.front-box h4 {
+    font-size: 1.6rem;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
 
 /* FOOTER */
 footer {
