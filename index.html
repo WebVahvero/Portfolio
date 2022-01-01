@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="mobileMenu.js"></script>
-    <script src="typewriter.js" defer></script>
-    <script src="tab.js" defer></script>
+    <script src="scripts/typewriter.js"></script>
+    <script src="scripts/navbar.js" defer></script>
+    <script src="scripts/tab.js" defer></script>
+    <script src="scripts/observer.js" defer></script>
+    <script src="scripts/langSwitch.js" defer></script>
 </head>
 <body onload="typeWriter()">
     <header>
@@ -26,27 +27,29 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="#about">Minusta</a></li>
-                    <li><a href="#skills">Osaaminen</a></li>
-                    <li><a href="#">Projektit</a></li>
+                    <li><a id="aboutLink" href="#about">Minusta</a></li>
+                    <li><a id="skillsLink" href="#skills">Osaaminen</a></li>
+                    <li><a id="projectsLink" href="#projects">Projektit</a></li>
                 </ul>
             </nav>
             <div class="language">
                 <ul>
-                    <li><a href="">FIN</a></li>
+                    <li><a href="#fin" data-reload="Suomi">Suomi</a></li>
                     <span>|</span>
-                    <li><a href="">Eng</a></li>
+                    <li><a href="#eng" data-reload="English">English</a></li>
                 </ul>
             </div>
-            <div id="menu-btn" class="menu-toggle">
-                <img src="icons/menu_black_24dp.svg">
+            <div id="mobile-menu" class="menu-toggle" onclick="hamburger(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
             </div>
         </div>
-        <div class="header-bottom hide-menu">
+        <div id="header-bottom" class="header-bottom">
             <div class="mobile-menu">
-                <a id="mItem" href="#about">Minusta</a>
-                <a id="mItem" href="#skills">Osaaminen</a>
-                <a id="mItem" href="#">Projektit</a>
+                <a id="mItem aboutLink" href="#about">Minusta</a>
+                <a id="mItem skillsLink" href="#skills">Osaaminen</a>
+                <a id="mItem projectsLink" href="#projects">Projektit</a>
             </div>
         </div>
     </header>
@@ -64,7 +67,7 @@
         <section id="about" class="about">
             <div class="about-heading">
                 <aside class="about-text">
-                    <h3>Tervetuloa ja kiitos, että päätit vierailla Portfoliosivustollani.</h3>
+                    <h3 id="greeting">Tervetuloa ja kiitos, että päätit vierailla Portfoliosivustollani!</h3>
                 </aside>
                 <figure class="about-avatar">
                     <img src="img/valtsu-ilmantausta.png" alt="Valtteri Kurunsaari">
@@ -72,23 +75,23 @@
             </div>
             <div class="about-articles">
                 <article class="aboutme about">
-                    <h4>Tässä hieman minusta</h4>
-                    <p>Olen 24-vuotias ja opiskelen tällähetkellä Vaasan Ammattikorkeakoulussa Tietojenkäsittelyä</p>
+                    <h4 id="aboutMe">Tässä hieman minusta</h4>
+                    <p id="aboutmeText1">Olen 24-vuotias ja opiskelen tällähetkellä Vaasan Ammattikorkeakoulussa Tietojenkäsittelyä</p>
                     <br>
-                    <p>Kiinnostukseni kohteisiin kuuluu erityisesti verkkosivustojen ja -ohjelmistojen kehitys, sekä niiden suunnittelu</p>
+                    <p id="aboutmeText2">Kiinnostukseni kohteisiin kuuluu erityisesti verkkosivustojen ja -ohjelmistojen kehitys, sekä niiden suunnittelu</p>
                     <br>
-                    <p>Työkokemusta minulta löytyy muutama vuosi ravintola-alalta, mutta kokemusta IT-alalla työskentelystä minulla on vain työharjoittelusta, jota suoritan tällähetkellä</p>
+                    <p id="aboutmeText3">Työkokemusta minulta löytyy muutama vuosi ravintola-alalta, mutta kokemusta IT-alalla työskentelystä minulla on vain työharjoittelusta, jota suoritan tällähetkellä</p>
                     <br>
-                    <p>Vapaa-aikaani vietän mielelläni omien koodaus/ohjelmointi projektien ja liikunnan parissa. Pidän myös paljon erillaisten ruokien ja leivonnaisten valmistamisesta</p>
+                    <p id="aboutmeText4">Vapaa-aikaani vietän mielelläni omien koodaus/ohjelmointi projektien ja liikunnan parissa. Pidän myös paljon erillaisten ruokien ja leivonnaisten valmistamisesta</p>
                 </article>
                 <article class="aboutschool about">
-                    <h4>Koulutus</h4>
-                    <p>Vaasan ammattikorkeakoulu,<br>Tietojenkäsittelyn tradenomi,AMK <br>(03.09.2019 - jatkuu)</p>
+                    <h4 id="aboutSchool">Koulutus</h4>
+                    <p id="aboutSchoolText1">Vaasan ammattikorkeakoulu,<br>Tietojenkäsittelyn tradenomi,AMK <br>(03.09.2019 - jatkuu)</p>
                     <br>
                     <br>
-                    <p>Koulutuskeskus Sedu Lapua,<br>Hotelli-, Ravintola- ja Catering -alan perustutkinto<br>(12.08.2013 - 18.12.2015)</p>
+                    <p id="aboutSchoolText2">Koulutuskeskus Sedu Lapua,<br>Hotelli-, Ravintola- ja Catering -alan perustutkinto<br>(12.08.2013 - 18.12.2015)</p>
                     <button class="grades-btn">
-                        <a class="btn" href="#" target="_blank">Katso arvosanani</a>
+                        <a id="aboutSchoolBtn" class="btn" href="#" target="_blank">Katso arvosanani</a>
                     </button>
                 </article>
                 <div class="workTab">
@@ -101,40 +104,40 @@
                     </div>                          
                     <div id="Powerpark" class="tabcontent">
                         <h5>Powerpark</h5>
-                        <p>Työskentelin ravintolakokkina huvipuisto Powerparkin ravintoloissa</p>
+                        <p id="workExp1">Työskentelin ravintolakokkina huvipuisto Powerparkin ravintoloissa</p>
                         <br>
-                        <p>Tehtävänä yrityksessä oli a la carte ja lounas ruokien valmistus ja keittiön tavanomaiset työt</p>
+                        <p id="workExp2">Tehtävänä yrityksessä oli a la carte ja lounas ruokien valmistus ja keittiön tavanomaiset työt</p>
                     </div>                         
                     <div id="OperaGrill" class="tabcontent">
                         <h5>OperaGrill</h5>
-                        <p>Työskentelin Savolinnan OperaGrillissä kahtena kesänä vuosina 2017 ja 2018</p>
+                        <p id="workExp3">Työskentelin Savolinnan OperaGrillissä kahtena kesänä vuosina 2017 ja 2018</p>
                         <br>
-                        <p>Tehtävänä yrityksessä oli a la carte annosten valmistaminen ja keittiön tavanomaiset työt</p>
+                        <p id="workExp4">Tehtävänä yrityksessä oli a la carte annosten valmistaminen ja keittiön tavanomaiset työt</p>
                     </div>                        
                     <div id="Rosso" class="tabcontent">
                         <h5>Rosso</h5>
-                        <p>Työskentelin yrityksessä määräaikaisena työntekijänä vuosina 2017, 2018 ja 2019</p>
+                        <p id="workExp5">Työskentelin yrityksessä määräaikaisena työntekijänä vuosina 2017, 2018 ja 2019</p>
                         <br>
-                        <p>Tehtävänä yrityksessä oli a la carte annosten valmistaminen ja keittiön tavanomaiset työt</p>
+                        <p id="workExp6">Tehtävänä yrityksessä oli a la carte annosten valmistaminen ja keittiön tavanomaiset työt</p>
                     </div>
                     <div id="Pancho" class="tabcontent">
                         <h5>Pancho Villa</h5>
-                        <p>Olin töissä Pancho Villassa alkuvuoden ja kesän 2021</p>
+                        <p id="workExp7">Olin töissä Pancho Villassa alkuvuoden ja kesän 2021</p>
                         <br>
-                        <p>Tehtävänä yrityksessä oli annosten kuten hampurilaisten ja meksikolaistyylisten annosten valmistaminen ja keittiön tavanomaiset työt</p>
+                        <p id="workExp8">Tehtävänä yrityksessä oli annosten kuten hampurilaisten ja meksikolaistyylisten annosten valmistaminen ja keittiön tavanomaiset työt</p>
                     </div>
                     <div id="WebAula" class="tabcontent">
                         <h5>WebAula</h5>
-                        <p>Työharjoittelijana WebAulalla 13.9.2021 - 17.2.2022</p>
+                        <p id="workExp9">Työharjoittelijana WebAulalla 13.9.2021 - 17.2.2022</p>
                         <br>
-                        <p>Ensimmäinen IT-alan työ. Tehtävänä yrityksessä Wordpress sivustojen rakentaminen asiakas yrityksille</p>
+                        <p id="workExp10">Ensimmäinen IT-alan työ. Tehtävänä yrityksessä Wordpress sivustojen rakentaminen, testaaminen ja sisällönpäivitys asiakas yrityksille</p>
                     </div>
                 </div>
             </div>
         </section>
         <section id="skills" class="skills">
             <div class="skills-title">
-                <h3>Osaaminen</h3>
+                <h3 id="skillsTitle">Osaaminen</h3>
             </div>
             <div class="skills-content">
                 <div class="box">
@@ -150,13 +153,10 @@
                             <img src="icons/Inkscape_Logo.svg.png" alt="">
                         </div>
                       </div>
-                      <div id="desing" class="front-box">
-                          <div class="taptap">
-                            <img src="icons/hand-point-right-regular.svg" alt="">
-                          </div>
-                        <h4>Suunnittelu</h4>
-                        <p>Aloittan usein verkkosivujen tai ohjelmien tekemisen suunnittelemalla niiden ulkoasun. Ulkoasun suunnitteluun käytän yleensä Figmaa, jonka olen havainnut olevan itselleni mieluisin. Myös Adobe XD on tuttu, mutta sitä en käytä säännöllisesti</p>
-                        <p>Kuvia tai logoja muokkaan yleensä Photoshopilla, gimpillä tai inkscapella</p>
+                      <div id="desing" class="front-box slideAnim" data-delay="0s">
+                        <h4 id="desingTitle">Suunnittelu</h4>
+                        <p id="desingText1">Aloitan usein verkkosivujen tai ohjelmien tekemisen suunnittelemalla niiden ulkoasun. Ulkoasun suunnitteluun käytän yleensä Figmaa, jonka olen havainnut olevan itselleni mieluisin. Myös Adobe XD on tuttu, mutta sitä en käytä säännöllisesti</p>
+                        <p id="desingText2">Kuvia tai logoja muokkaan yleensä Photoshopilla, gimpillä tai inkscapella</p>
                       </div>
                     </div>
                 </div>
@@ -173,11 +173,11 @@
                             <img src="icons/js-brands.svg" alt="">
                         </div>
                       </div>
-                      <div class="front-box">
-                        <h4>Frontend teknologiat</h4>
-                        <p>Verkkosivujen julkisivun rakentaminen luonnistuu minulta luontevasti HTLM ja CSS teknologioita käyttäen.</p>
-                        <p>Sivustoihin interaktiivisuutta lisään käyttäen JavaScriptiä ja sen frameworkkeja sekä kirjastoja</p>
-                        <p>Olen myös kiinnostunut oppimaan lisää JavaScriptin frameworkkeja</p>
+                      <div class="front-box slideAnim" data-delay="0s">
+                        <h4 id="frontTitle">Frontend teknologiat</h4>
+                        <p id="frontText1">Verkkosivujen julkisivun rakentaminen luonnistuu minulta luontevasti HTLM ja CSS teknologioita käyttäen.</p>
+                        <p id="frontText2">Sivustoihin interaktiivisuutta lisään käyttäen JavaScriptiä ja sen frameworkkeja sekä kirjastoja</p>
+                        <p id="frontText3">Olen myös kiinnostunut oppimaan lisää JavaScriptin frameworkkeja</p>
                       </div>
                     </div>
                 </div>
@@ -191,10 +191,10 @@
                             <img src="icons/mysql-seeklogo.com.svg" alt="">
                         </div>
                       </div>
-                      <div id="backend" class="front-box">
-                        <h4>Backend teknologiat</h4>
-                        <p>Dynaamisuuta luon sivustoille käyttäen PHPta, joka on minulle tutuin palvelinpuolen skriptikieli.</p>
-                        <p>Tietokantoja olen rakentanut käyttäen MySql tietokantaa.</p>
+                      <div id="backend" class="front-box slideAnim" data-delay="0s">
+                        <h4 id="backTitle">Backend teknologiat</h4>
+                        <p id="backText1">Dynaamisuuta luon sivustoille käyttäen PHPta, joka on minulle tutuin palvelinpuolen skriptikieli.</p>
+                        <p id="backText2">Tietokantoja olen rakentanut käyttäen MySql tietokantaa.</p>
                       </div>
                     </div>
                 </div>
@@ -208,9 +208,9 @@
                             <img src="icons/elementor-brands.svg" alt="">
                         </div>
                       </div>
-                      <div id="wordpress" class="front-box">
-                        <h4>Wordpress</h4>
-                        <p>Wordpressillä olen tehnyt useita sivustoja yrityksille käyttäen lisäosia kuten Elementor, Woocommerce, Polylang, FacetWP ja Gravityforms</p>
+                      <div id="wordpress" class="front-box slideAnim" data-delay="0s">
+                        <h4 id="wordpressTitle">Wordpress</h4>
+                        <p id="worpressText1">Wordpressillä olen tehnyt useita sivustoja yrityksille käyttäen lisäosia kuten Elementor, Woocommerce, Polylang, FacetWP ja Gravityforms</p>
                       </div>
                     </div>
                 </div>
@@ -224,14 +224,14 @@
                             <img src="icons/github-brands.svg" alt="">
                         </div>
                       </div>
-                      <div id="git" class="front-box">
-                        <h4>Versionhallinta</h4>
-                        <p>Versionhallintana minulle tutuin on git ja käytän sitä GitHubin kanssa.</p>
+                      <div id="git" class="front-box slideAnim" data-delay="0s">
+                        <h4 id="versionTitle">Versionhallinta</h4>
+                        <p id="versionText">Versionhallintana minulle tutuin on git ja käytän sitä GitHubin kanssa.</p>
                       </div>
                     </div>
                 </div>
-                <div id="basics" class="box">
-                    <div class="back-box">
+                <div class="box">
+                    <div id="basics" class="back-box">
                       <div class="icons">
                         <div class="icon">
                           <img src="icons/python-brands.svg" alt="">
@@ -240,18 +240,18 @@
                             <img src="icons/c-sharp-c-seeklogo.com.svg" alt="">
                         </div>
                       </div>
-                      <div basics class="front-box">
-                        <h4>Teknologiat, joista hallitsen perusteet</h4>
-                        <p>Koulussa käytimme ohjelmoinnin opiskeluun C# kieltä ja olen tehnyt muutamia yksinkertaisia ohjelmia sen avulla, mutta en ole käyttänyt sitä henkilökohtaisten projektien tekemiseen.</p>
-                        <p>Pythonin opettelin mielenkiinnosta ja olen tehnyt muutamia perusteiden optetteluun soveltuvia ohjelmia sillä.</p>
+                      <div id="basics" class="front-box slideAnim" data-delay="0s">
+                        <h4 id="basicTitle">Teknologiat, joista hallitsen perusteet</h4>
+                        <p id="basicText1">Koulussa käytimme ohjelmoinnin opiskeluun C# kieltä ja olen tehnyt muutamia yksinkertaisia ohjelmia sen avulla, mutta en ole käyttänyt sitä henkilökohtaisten projektien tekemiseen.</p>
+                        <p id="basicText2">Pythonin opettelin mielenkiinnosta ja olen tehnyt muutamia perusteiden opetteluun soveltuvia ohjelmia sillä.</p>
                       </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="projects">
+        <section id="projects" class="projects">
             <div class="projects-title">
-                <h3>Projektini</h3>
+                <h3 id="projectsTitle">Projektini</h3>
             </div>
             <div class="projects-content">
                 <div id="first-card" class="card">
@@ -259,20 +259,20 @@
                         <p>In Progress!</p>
                     </div>
                     <div class="card-main-title">
-                      <h4>Ruoka<br>blogi</h4>
+                      <h4 id="cardFrontTitle1">Ruoka<br>blogi</h4>
                     </div>
                     <article class="card-content">
                       <div class="card-inner">
                         <div class="card-title">
-                        <h5>Ruokablogi</h5>
+                        <h5 id="cardBackTitle1">Ruokablogi</h5>
                       </div>
                       <div class="card-text">
-                        <p>I love cats i am one wake up scratch humans leg for food then purr then i have a and relax chase the pig around the house i is not fat, i is fluffy yet find a way to fit in tiny box. I just saw other cats inside the house and nobody ask me before using my litter box find empty spot in cupboard and sleep all day.</p>
+                        <p id="cardText1">Tämän projektin tarkoituksena oli staattinen verkkosivusto, johon lisäilisin muutamia ruokia joita olene tehnyt. Ruokapostauksiin sisältyy kuvia annoksesta, tarvittavat aineet ja ohjeet sen valmistamiseen. Verkkosivun frontin valmistumisen jälkeen olisi tarkoituksena lisätä projektiin backend ja mahdollisuus muuttaa annoskokoja reseptissä</p>
                       </div>
                       <div class="card-links">
                         <ul>
-                          <li><a href="https://github.com/WebVahvero/MuiskismaiskisBlog">Github repo</a></li>
-                          <li><a href="https://webvahvero.github.io/MuiskismaiskisBlog/">Linkki sivulle</a></li>
+                          <li><a href="https://github.com/WebVahvero/MuiskismaiskisBlog"><u>GitHub</u></a></li>
+                          <li><a href="https://webvahvero.github.io/MuiskismaiskisBlog/"><u id="cardLink">Sivulle</u></a></li>
                         </ul>
                       </div>
                       </div>
@@ -284,15 +284,15 @@
     <footer>
         <div class="contact">
             <figure class="social-icon">
-                <img src="icons/github-link.svg" alt="">
+                <a href="https://github.com/WebVahvero"><img src="icons/github-link.svg" alt=""></a>
             </figure>
             <figure class="social-icon">
-                <img src="icons/linkedin-brands.svg" alt="">
+                <a href="https://www.linkedin.com/in/valtteri-kurunsaari-b40410207/"><img src="icons/linkedin-brands.svg" alt=""></a>
             </figure>
         </div>
         <div class="legal">
             <img class="copyright-icon" src="icons/copyright-regular.svg" alt="">
-            <h5>2021 Valtteri Kurunsaari</h5>
+            <h5>2022 Valtteri Kurunsaari</h5>
         </div>
     </footer>
 </body>

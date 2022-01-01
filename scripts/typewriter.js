@@ -1,6 +1,6 @@
 var i = 0;
 var j = 0;
-var firstTxt = 'Web-Developer';
+var firstTxt = '  Web-Developer';
 var secondTxt = 'Portfolio';
 var speed = 360;
 
