@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="scripts/typewriter.js"></script>
+    <link rel="icon" type="image/x-icon" href="img/valtsu-ilmantausta.png">
+    <script src="scripts/typewriter.js" defer></script>
+    <script src="scripts/langSwitch.js" defer></script>
     <script src="scripts/navbar.js" defer></script>
     <script src="scripts/tab.js" defer></script>
     <script src="scripts/observer.js" defer></script>
-    <script src="scripts/langSwitch.js" defer></script>
 </head>
 <body onload="typeWriter()">
     <header>
@@ -25,20 +26,20 @@
                     </div>
                 </div>
             </a>
+            <div class="language">
+              <ul>
+                  <li><a href="#fin" data-reload="Suomi">Suomi</a></li>
+                  <span>|</span>
+                  <li><a href="#eng" data-reload="English">English</a></li>
+              </ul>
+          </div>
             <nav>
                 <ul>
-                    <li><a id="aboutLink" href="#about">Minusta</a></li>
-                    <li><a id="skillsLink" href="#skills">Osaaminen</a></li>
-                    <li><a id="projectsLink" href="#projects">Projektit</a></li>
+                    <li><a id="aboutLink" href="#about">About</a></li>
+                    <li><a id="skillsLink" href="#skills">Skills</a></li>
+                    <li><a id="projectsLink" href="#projects">Projects</a></li>
                 </ul>
             </nav>
-            <div class="language">
-                <ul>
-                    <li><a href="#fin" data-reload="Suomi">Suomi</a></li>
-                    <span>|</span>
-                    <li><a href="#eng" data-reload="English">English</a></li>
-                </ul>
-            </div>
             <div id="mobile-menu" class="menu-toggle" onclick="hamburger(this)">
               <div class="bar1"></div>
               <div class="bar2"></div>
@@ -47,20 +48,29 @@
         </div>
         <div id="header-bottom" class="header-bottom">
             <div class="mobile-menu">
-                <a id="mItem aboutLink" href="#about">Minusta</a>
-                <a id="mItem skillsLink" href="#skills">Osaaminen</a>
-                <a id="mItem projectsLink" href="#projects">Projektit</a>
+              <ul>
+                <li><a id="mItem aboutLink" href="#about">About</a></li>
+                <li><a id="mItem skillsLink" href="#skills">Skills</a></li>
+                <li><a id="mItem projectsLink" href="#projects">Projects</a></li>
+              </ul>
             </div>
+            <div class="mobileLanguage">
+              <ul>
+                  <li><a href="#fin" data-reload="Suomi">Suomi</a></li>
+                  <span>|</span>
+                  <li><a href="#eng" data-reload="English">English</a></li>
+              </ul>
+          </div>
         </div>
     </header>
     <main>
         <section id="hero" class="hero">
             <div class="hero-title">
                 <div class="hero-title-top">
-                    <h1 id="top-title"></h1>
+                    <h1 id="top-title"> </h1>
                 </div>
                 <div class="hero-title-bottom">
-                    <h1 id="bottom-title"></h1>
+                    <h1 id="bottom-title"> </h1>
                 </div>
             </div>
         </section>
@@ -94,44 +104,45 @@
                         <a id="aboutSchoolBtn" class="btn" href="#" target="_blank">Katso arvosanani</a>
                     </button>
                 </article>
-                <div class="workTab">
-                    <div class="tab">
-                        <button class="tablinks" onclick="openWork(event, 'Powerpark')" id="defaultOpen">Powerpark</button>
-                        <button class="tablinks" onclick="openWork(event, 'OperaGrill')">Opera Grill</button>
-                        <button class="tablinks" onclick="openWork(event, 'Rosso')">Rosso</button>
-                        <button class="tablinks" onclick="openWork(event, 'Pancho')">Pancho Villa</button>
-                        <button class="tablinks" onclick="openWork(event, 'WebAula')">WebAula</button>
-                    </div>                          
-                    <div id="Powerpark" class="tabcontent">
-                        <h5>Powerpark</h5>
-                        <p id="workExp1">Työskentelin ravintolakokkina huvipuisto Powerparkin ravintoloissa</p>
-                        <br>
-                        <p id="workExp2">Tehtävänä yrityksessä oli a la carte ja lounas ruokien valmistus ja keittiön tavanomaiset työt</p>
-                    </div>                         
-                    <div id="OperaGrill" class="tabcontent">
-                        <h5>OperaGrill</h5>
-                        <p id="workExp3">Työskentelin Savolinnan OperaGrillissä kahtena kesänä vuosina 2017 ja 2018</p>
-                        <br>
-                        <p id="workExp4">Tehtävänä yrityksessä oli a la carte annosten valmistaminen ja keittiön tavanomaiset työt</p>
-                    </div>                        
-                    <div id="Rosso" class="tabcontent">
-                        <h5>Rosso</h5>
-                        <p id="workExp5">Työskentelin yrityksessä määräaikaisena työntekijänä vuosina 2017, 2018 ja 2019</p>
-                        <br>
-                        <p id="workExp6">Tehtävänä yrityksessä oli a la carte annosten valmistaminen ja keittiön tavanomaiset työt</p>
-                    </div>
-                    <div id="Pancho" class="tabcontent">
-                        <h5>Pancho Villa</h5>
-                        <p id="workExp7">Olin töissä Pancho Villassa alkuvuoden ja kesän 2021</p>
-                        <br>
-                        <p id="workExp8">Tehtävänä yrityksessä oli annosten kuten hampurilaisten ja meksikolaistyylisten annosten valmistaminen ja keittiön tavanomaiset työt</p>
-                    </div>
-                    <div id="WebAula" class="tabcontent">
-                        <h5>WebAula</h5>
-                        <p id="workExp9">Työharjoittelijana WebAulalla 13.9.2021 - 17.2.2022</p>
-                        <br>
-                        <p id="workExp10">Ensimmäinen IT-alan työ. Tehtävänä yrityksessä Wordpress sivustojen rakentaminen, testaaminen ja sisällönpäivitys asiakas yrityksille</p>
-                    </div>
+            </div>
+            <div class="workTab">
+              <h4 id="aboutWork">Työkokemus</h4>
+                <div class="tab">
+                    <button class="tablinks" onclick="openWork(event, 'Powerpark')">Powerpark</button>
+                    <button class="tablinks" onclick="openWork(event, 'OperaGrill')">Opera Grill</button>
+                    <button class="tablinks" onclick="openWork(event, 'Rosso')">Rosso</button>
+                    <button class="tablinks" onclick="openWork(event, 'Pancho')">Pancho Villa</button>
+                    <button class="tablinks" onclick="openWork(event, 'WebAula')" id="defaultOpen">WebAula</button>
+                </div>                          
+                <div id="Powerpark" class="tabcontent">
+                    <h5>Powerpark</h5>
+                    <p id="workExp1">Työskentelin ravintolakokkina huvipuisto Powerparkin ravintoloissa</p>
+                    <br>
+                    <p id="workExp2">Tehtävänä yrityksessä oli a la carte ja lounas ruokien valmistus ja keittiön tavanomaiset työt</p>
+                </div>                         
+                <div id="OperaGrill" class="tabcontent">
+                    <h5>OperaGrill</h5>
+                    <p id="workExp3">Työskentelin Savolinnan OperaGrillissä kahtena kesänä vuosina 2017 ja 2018</p>
+                    <br>
+                    <p id="workExp4">Tehtävänä yrityksessä oli a la carte annosten valmistaminen ja keittiön tavanomaiset työt</p>
+                </div>                        
+                <div id="Rosso" class="tabcontent">
+                    <h5>Rosso</h5>
+                    <p id="workExp5">Työskentelin yrityksessä määräaikaisena työntekijänä vuosina 2017, 2018 ja 2019</p>
+                    <br>
+                    <p id="workExp6">Tehtävänä yrityksessä oli a la carte annosten valmistaminen ja keittiön tavanomaiset työt</p>
+                </div>
+                <div id="Pancho" class="tabcontent">
+                    <h5>Pancho Villa</h5>
+                    <p id="workExp7">Olin töissä Pancho Villassa alkuvuoden ja kesän 2021</p>
+                    <br>
+                    <p id="workExp8">Tehtävänä yrityksessä oli annosten kuten hampurilaisten ja meksikolaistyylisten annosten valmistaminen ja keittiön tavanomaiset työt</p>
+                </div>
+                <div id="WebAula" class="tabcontent">
+                    <h5>WebAula</h5>
+                    <p id="workExp9">Työharjoittelijana WebAulalla 13.9.2021 - 17.2.2022</p>
+                    <br>
+                    <p id="workExp10">Ensimmäinen IT-alan työ. Tehtävänä yrityksessä Wordpress sivustojen rakentaminen, testaaminen ja sisällönpäivitys asiakas yrityksille</p>
                 </div>
             </div>
         </section>
@@ -224,7 +235,7 @@
                             <img src="icons/github-brands.svg" alt="">
                         </div>
                       </div>
-                      <div id="git" class="front-box slideAnim" data-delay="0s">
+                      <div id="git" class="front-box slideAnim gitTitle" data-delay="0s">
                         <h4 id="versionTitle">Versionhallinta</h4>
                         <p id="versionText">Versionhallintana minulle tutuin on git ja käytän sitä GitHubin kanssa.</p>
                       </div>
@@ -269,10 +280,59 @@
                       <div class="card-text">
                         <p id="cardText1">Tämän projektin tarkoituksena oli staattinen verkkosivusto, johon lisäilisin muutamia ruokia joita olene tehnyt. Ruokapostauksiin sisältyy kuvia annoksesta, tarvittavat aineet ja ohjeet sen valmistamiseen. Verkkosivun frontin valmistumisen jälkeen olisi tarkoituksena lisätä projektiin backend ja mahdollisuus muuttaa annoskokoja reseptissä</p>
                       </div>
+                      <div class="techs">
+                        <div class="tech">
+                          <img src="icons/html5-brands light.svg" alt="">
+                        </div>
+                        <div class="tech">
+                          <img src="icons/css3-alt-brands light.svg" alt="">
+                        </div>
+                        <div class="tech">
+                          <img src="icons/js-brands light.svg" alt="">
+                        </div>
+                        <div class="tech">
+                          <img src="icons/php-brands light.svg" alt="">
+                        </div>
+                        <div class="tech">
+                          <img src="icons/mysql-seeklogo.com light.svg" alt="">
+                        </div>
+                      </div>
                       <div class="card-links">
                         <ul>
                           <li><a href="https://github.com/WebVahvero/MuiskismaiskisBlog"><u>GitHub</u></a></li>
                           <li><a href="https://webvahvero.github.io/MuiskismaiskisBlog/"><u id="cardLink">Sivulle</u></a></li>
+                        </ul>
+                      </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div id="second-card" class="card">
+                    <div class="card-main-title">
+                      <h4 id="cardFrontTitle2">Ruoka- arvostelu generaattori</h4>
+                    </div>
+                    <article class="card-content">
+                      <div class="card-inner">
+                        <div class="card-title">
+                        <h5 id="cardBackTitle2">Ruoka- arvostelu generaattori</h5>
+                      </div>
+                      <div class="card-text">
+                        <p id="cardText2">Tämän projektin tarkoituksena oli tehdä satiirinen generaattori ja opetella JavaScriptin arrayta, sekä DOM manipulointia.</p>
+                      </div>
+                      <div class="techs">
+                        <div class="tech">
+                          <img src="icons/html5-brands light.svg" alt="">
+                        </div>
+                        <div class="tech">
+                          <img src="icons/css3-alt-brands light.svg" alt="">
+                        </div>
+                        <div class="tech">
+                          <img src="icons/js-brands light.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="card-links">
+                        <ul>
+                          <li><a href="https://github.com/WebVahvero/FoodReviewGenerator"><u>GitHub</u></a></li>
+                          <li><a href="https://webvahvero.github.io/FoodReviewGenerator/"><u id="cardLink">Sivulle</u></a></li>
                         </ul>
                       </div>
                       </div>

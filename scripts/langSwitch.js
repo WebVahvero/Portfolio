@@ -17,6 +17,7 @@ var language = {
         aboutSchoolText1Js: "Vaasan ammattikorkeakoulu, Tietojenkäsittelyn tradenomi, AMK (03.09.2019 - jatkuu)",
         aboutSchoolText2Js: "Koulutuskeskus Sedu Lapua, Hotelli-, Ravintola- ja Catering -alan perustutkinto (12.08.2013 - 18.12.2015)",
         aboutSchoolBtnJs: "Katso arvosanani",
+        aboutWorkJs: "Työkokemus",
         workExp1Js: "Työskentelin ravintolakokkina huvipuisto Powerparkin ravintoloissa",
         workExp2Js: "Tehtävänä yrityksessä oli a la carte ja lounas ruokien valmistus ja keittiön tavanomaiset työt",
         workExp3Js: "Työskentelin Savolinnan OperaGrillissä kahtena kesänä vuosina 2017 ja 2018",
@@ -51,6 +52,9 @@ var language = {
         cardFrontTitle1Js: "Ruoka blogi",
         cardBackTitle1Js: "Ruokablogi",
         cardText1Js: "Tämän projektin tarkoituksena oli staattinen verkkosivusto, johon lisäilisin muutamia ruokia joita olene tehnyt. Ruokapostauksiin sisältyy kuvia annoksesta, tarvittavat aineet ja ohjeet sen valmistamiseen. Verkkosivun frontin valmistumisen jälkeen olisi tarkoituksena lisätä projektiin backend ja mahdollisuus muuttaa annoskokoja reseptissä",
+        cardFrontTitle2Js: "Ruoka- arvostelu generaattori",
+        cardBackTitle2Js: "Ruoka- arvostelu generaattori",
+        cardText2Js: "Tämän projektin tarkoituksena oli tehdä satiirinen generaattori ja opetella JavaScriptin arrayta, sekä DOM manipulointia.",
         cardLinkJs: "Sivulle",
     },
     eng: {
@@ -67,6 +71,7 @@ var language = {
         aboutSchoolText1Js: "Vaasa University of Applied Sciences, Bachelor of Information Technology, (03.09.2019 - ongoing)",
         aboutSchoolText2Js: "Vocational school Sedu Lapua, Hotel-, Restauranta- and Catering (12.08.2013 - 18.12.2015)",
         aboutSchoolBtnJs: "Grades",
+        aboutWorkJs: "Work",
         workExp1Js: "My position in this workplace  was a chef",
         workExp2Js: "My tasks as a chef included cooking a la carte and lunch dishes and common restaurant tasks",
         workExp3Js: "I worked as chef two summers in 2017 and 2018 at Opera Grill.",
@@ -101,6 +106,9 @@ var language = {
         cardFrontTitle1Js: "Food Blog",
         cardBackTitle1Js: "FoodBlog",
         cardText1Js: "The purpose of this project was a static website to which I would add a few dishes I have made. Food posts include pictures of the dish, the ingredients needed, and instructions for making it. After the completion of the Front of the website, the intention would be to add a backend to the project and the possibility to change the portion sizes in the recipe",
+        cardFrontTitle2Js: "Food Review Generator",
+        cardBackTitle2Js: "Food Review Generator",
+        cardText2Js: "The purpose of this project was to make a satirical generator and learn JavaScript array, as well as DOM manipulation.",
         cardLinkJs: "To Website",
     }
 };
@@ -121,6 +129,7 @@ if (window.location.hash) {
         aboutSchoolText1.textContent = language.eng.aboutSchoolText1Js;
         aboutSchoolText2.textContent = language.eng.aboutSchoolText2Js;
         aboutSchoolBtn.textContent = language.eng.aboutSchoolBtnJs;
+        aboutWork.textContent = language.eng.aboutWorkJs;
         workExp1.textContent = language.eng.workExp1Js;
         workExp2.textContent = language.eng.workExp2Js;
         workExp3.textContent = language.eng.workExp3Js;
@@ -155,13 +164,16 @@ if (window.location.hash) {
         cardFrontTitle1.textContent = language.eng.cardFrontTitle1Js;
         cardBackTitle1.textContent = language.eng.cardBackTitle1Js;
         cardText1.textContent = language.eng.cardText1Js;
+        cardFrontTitle2.textContent = language.eng.cardFrontTitle2Js;
+        cardBackTitle2.textContent = language.eng.cardBackTitle2Js;
+        cardText2.textContent = language.eng.cardText2Js;
         cardLink.textContent = language.eng.cardLinkJs;
     }
 }
 
 // Define language reload onclick iteration
-for (i = 0; i <= dataReload.length - 1; i++) {
-    dataReload[i].onclick = function() {
+for (k = 0; k <= dataReload.length - 1; k++) {
+    dataReload[k].onclick = function() {
         setTimeout(function () {
             location.reload(true);
         }, 100) //timer as ms
