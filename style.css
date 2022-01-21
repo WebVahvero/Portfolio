@@ -51,7 +51,9 @@ a.btn:focus {
 }
 
 a:hover,
-a:focus {
+a:focus,
+a u:hover,
+a u:focus {
     color: var(--third-color);
 }
 
