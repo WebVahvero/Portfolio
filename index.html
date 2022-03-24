@@ -23,6 +23,7 @@
     <script src="scripts/navbar.js" defer></script>
     <script src="scripts/tab.js" defer></script>
     <script src="scripts/observer.js" defer></script>
+    <script src="scripts/project.js" defer></script>
 </head>
 <body onload="typeWriter()">
   <!-- Google Tag Manager (noscript) -->
@@ -275,6 +276,14 @@
                 </div>
             </div>
         </section>
+        <section class="certificate">
+          <h2 id="certTitle">Sertifikaatit</h2>
+          <div class="certs">
+            <figure class="cert-box">
+              <img class="cert" src="img/certificate-elements-of-ai-fi.png" alt="certificate">
+            </figure>
+          </div>
+        </section>
         <section class="thoughts">
           <article class="thoughts-article">
             <h4 class="unskew" id="thoughtsTitle">Ajatuksia taidoista ja kiinnostuksenkohteista</h4>
@@ -287,81 +296,8 @@
             <div class="projects-title">
                 <h3 id="projectsTitle">Projektini</h3>
             </div>
-            <div class="projects-content">
-                <div id="first-card" class="card">
-                    <div class="progress">
-                        <p>In Progress!</p>
-                    </div>
-                    <div class="card-main-title">
-                      <h4 id="cardFrontTitle1">Ruoka<br>blogi</h4>
-                    </div>
-                    <article class="card-content">
-                      <div class="card-inner">
-                        <div class="card-title">
-                        <h5 id="cardBackTitle1">Ruokablogi</h5>
-                      </div>
-                      <div class="card-text">
-                        <p id="cardText1">Tämän projektin tarkoituksena oli staattinen verkkosivusto, johon lisäilisin muutamia ruokia joita olene tehnyt. Ruokapostauksiin sisältyy kuvia annoksesta, tarvittavat aineet ja ohjeet sen valmistamiseen. Verkkosivun frontin valmistumisen jälkeen olisi tarkoituksena lisätä projektiin backend ja mahdollisuus muuttaa annoskokoja reseptissä</p>
-                      </div>
-                      <div class="techs">
-                        <div class="tech">
-                          <img src="icons/html5-brands light.svg" alt="">
-                        </div>
-                        <div class="tech">
-                          <img src="icons/css3-alt-brands light.svg" alt="">
-                        </div>
-                        <div class="tech">
-                          <img src="icons/js-brands light.svg" alt="">
-                        </div>
-                        <div class="tech">
-                          <img src="icons/php-brands light.svg" alt="">
-                        </div>
-                        <div class="tech">
-                          <img src="icons/mysql-seeklogo.com light.svg" alt="">
-                        </div>
-                      </div>
-                      <div class="card-links">
-                        <ul>
-                          <li><a href="https://github.com/WebVahvero/MuiskismaiskisBlog"><u>GitHub</u></a></li>
-                          <li><a href="https://webvahvero.github.io/MuiskismaiskisBlog/"><u id="cardLink">Sivulle</u></a></li>
-                        </ul>
-                      </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div id="second-card" class="card">
-                    <div class="card-main-title">
-                      <h4 id="cardFrontTitle2">Ruoka- arvostelu generaattori</h4>
-                    </div>
-                    <article class="card-content">
-                      <div class="card-inner">
-                        <div class="card-title">
-                        <h5 id="cardBackTitle2">Ruoka- arvostelu generaattori</h5>
-                      </div>
-                      <div class="card-text">
-                        <p id="cardText2">Tämän projektin tarkoituksena oli tehdä satiirinen generaattori ja opetella JavaScriptin arrayta, sekä DOM manipulointia.</p>
-                      </div>
-                      <div class="techs">
-                        <div class="tech">
-                          <img src="icons/html5-brands light.svg" alt="">
-                        </div>
-                        <div class="tech">
-                          <img src="icons/css3-alt-brands light.svg" alt="">
-                        </div>
-                        <div class="tech">
-                          <img src="icons/js-brands light.svg" alt="">
-                        </div>
-                      </div>
-                      <div class="card-links">
-                        <ul>
-                          <li><a href="https://github.com/WebVahvero/FoodReviewGenerator"><u>GitHub</u></a></li>
-                          <li><a href="https://webvahvero.github.io/FoodReviewGenerator/"><u id="cardLink">Sivulle</u></a></li>
-                        </ul>
-                      </div>
-                      </div>
-                    </article>
-                  </div>
-            </div>
+            <a id="reposBtn" class="btn">Katso Projektini</a>
+            <div id="repos"></div>
         </section>
     </main>
     <footer>

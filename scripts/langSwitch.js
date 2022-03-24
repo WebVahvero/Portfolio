@@ -52,13 +52,9 @@ var language = {
         basicText3Js: "Minulla on myös kokemusta Power BI datan visualisointi ohjelmasta ja hallitsen siitä perusteet.",
 
         projectsTitleJs: "Projektini",
-        cardFrontTitle1Js: "Ruoka blogi",
-        cardBackTitle1Js: "Ruokablogi",
-        cardText1Js: "Tämän projektin tarkoituksena oli staattinen verkkosivusto, johon lisäilisin muutamia ruokia joita olene tehnyt. Ruokapostauksiin sisältyy kuvia annoksesta, tarvittavat aineet ja ohjeet sen valmistamiseen. Verkkosivun frontin valmistumisen jälkeen olisi tarkoituksena lisätä projektiin backend ja mahdollisuus muuttaa annoskokoja reseptissä",
-        cardFrontTitle2Js: "Ruoka- arvostelu generaattori",
-        cardBackTitle2Js: "Ruoka- arvostelu generaattori",
-        cardText2Js: "Tämän projektin tarkoituksena oli tehdä satiirinen generaattori ja opetella JavaScriptin arrayta, sekä DOM manipulointia.",
-        cardLinkJs: "Sivulle",
+        repoBtnJs: "Katso Projektini",
+
+        certTitleJs: "Sertifikaatit",
 
         thoughtsTitleJs: "Ajatuksia taidoista ja kiinnostuksenkohteista",
         thoughtsText1Js: "Olen todella kiinnostunut verkkosivujen kehityksestä ja jatkuvasti kertaan vanhoja jo opittuja asioita sekä perehdyn uusiin aina kun löydän niille aikaa opiskelujen ja muiden töiden ohella. Verkkosivustojen kehityksessä olen eniten perehtynyt sivustojen frontendin kehittämiseen, mutta tavoitteenani on myös backend puolen kehityksen hallitseminen.",
@@ -113,13 +109,9 @@ var language = {
         basicText3Js: "I also have experience with the Power BI data visualization program, and I master the basics.",
 
         projectsTitleJs: "My Projects",
-        cardFrontTitle1Js: "Food Blog",
-        cardBackTitle1Js: "FoodBlog",
-        cardText1Js: "The purpose of this project was a static website to which I would add a few dishes I have made. Food posts include pictures of the dish, the ingredients needed, and instructions for making it. After the completion of the Front of the website, the intention would be to add a backend to the project and the possibility to change the portion sizes in the recipe",
-        cardFrontTitle2Js: "Food Review Generator",
-        cardBackTitle2Js: "Food Review Generator",
-        cardText2Js: "The purpose of this project was to make a satirical generator and learn JavaScript array, as well as DOM manipulation.",
-        cardLinkJs: "To Website",
+        repoBtnJs: "Check My Projects",
+
+        certTitleJs: "Certificates",
 
         thoughtsTitleJs: "Thoughts on skills and interests",
         thoughtsText1Js: "I am really interested in the development of websites and constantly review old things that have already been learned, as well as getting acquainted with new ones whenever I find time for them, in addition to studies and other work. In website development, I am most familiar with developing the frontend of websites, but my goal is also to master the development of the backend side.",
@@ -175,13 +167,9 @@ if (window.location.hash) {
         basicText3.textContent = language.eng.basicText3Js;
 
         projectsTitle.textContent = language.eng.projectsTitleJs;
-        cardFrontTitle1.textContent = language.eng.cardFrontTitle1Js;
-        cardBackTitle1.textContent = language.eng.cardBackTitle1Js;
-        cardText1.textContent = language.eng.cardText1Js;
-        cardFrontTitle2.textContent = language.eng.cardFrontTitle2Js;
-        cardBackTitle2.textContent = language.eng.cardBackTitle2Js;
-        cardText2.textContent = language.eng.cardText2Js;
-        cardLink.textContent = language.eng.cardLinkJs;
+        reposBtn.textContent = language.eng.repoBtnJs;
+
+        certTitle.textContent = language.eng.certTitleJs;
 
         thoughtsTitle.textContent = language.eng.thoughtsTitleJs;
         thoughtsText1.textContent = language.eng.thoughtsText1Js;
