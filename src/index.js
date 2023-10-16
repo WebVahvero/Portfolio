@@ -1,9 +1,11 @@
 import './index.style.scss';
+import './Components/Header'
+import Header from './Components/Header';
 
 const Main = () => {
-    const mainElement = document.createElement('div');
+    const mainElement = document.createElement('main');
 
-    mainElement.innerHTML = "<p>Hello World!</p>";
+    mainElement.append(Header())
 
     return mainElement;
 }
