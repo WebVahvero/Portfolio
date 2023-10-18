@@ -35,6 +35,13 @@ a:hover {
     text-decoration: underline;
 }
 
+h1 {
+    color: var(--high-contrast-text);
+    line-height: 1;
+    font-size: 5rem;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+}
+
 p {
     color: var(--medium-contrast-text);
 }
@@ -51,6 +58,9 @@ header {
     padding: 20px 10%;
     align-items: center;
     flex-wrap: wrap;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
 
     p {
         line-height: 1;
@@ -69,5 +79,29 @@ header {
             list-style: none;
             width: 80px;
         }
+    }
+}
+
+#Intro {
+
+    figure {
+        object-fit: cover;
+
+        #intro-cover {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    #overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

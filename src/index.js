@@ -1,11 +1,11 @@
 import './index.style.scss';
-import './Components/Header'
-import Header from './Components/Header';
+import Header from './Components/HeaderFooter/Header';
+import Intro from './Components/Sections/Intro'
 
 const Main = () => {
     const mainElement = document.createElement('main');
 
-    mainElement.append(Header())
+    mainElement.append(Header(), Intro())
 
     return mainElement;
 }
