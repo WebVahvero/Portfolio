@@ -30,5 +30,21 @@
             "startDate": "September 2019",
             "endDate": "February 2023"
         }
+    ],
+    "work": [
+        {
+            "workplace": "WebAula Oy",
+            "title": "Trainee Wordpress Developer",
+            "description": "Development and maintenance of Wordpress websites and e-commerce sites. Graphic design using Adobe tools",
+            "startDate": "September 2021",
+            "endDate": "February 2022"
+        },
+        {
+            "workplace": "Attido Oy",
+            "title": "Junior Service Desk Specialist",
+            "description": "Ticket handling, monitoring and Jira, Windows, Microsoft 365 & Oracle Financials R12 administration tasks.",
+            "startDate": "February 2023",
+            "endDate": "Current"
+        }
     ]
 }
