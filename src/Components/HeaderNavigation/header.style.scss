@@ -1,0 +1,30 @@
+header {
+    background-color: var(--header);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+
+    p {
+        line-height: 1;
+        font-size: 1.5rem
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            font-size: 1.2rem;
+        }
+
+        li {
+            list-style: none;
+            width: 80px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+#Intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+    #intro-title {
+        z-index: 100;
+    }
+
+    #overlay {
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+    }
+}
