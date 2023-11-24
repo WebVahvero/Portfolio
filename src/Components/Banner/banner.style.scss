@@ -1,0 +1,32 @@
+#tech-banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+    .tech-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px;
+        padding: 10px;
+        transition: 200ms;
+        
+        i {
+            color: var(--medium-contrast-text);
+        }
+
+        h6 {
+            color: var(--medium-contrast-text);
+            margin-top: 5px;
+        }
+    }
+
+    .tech-card:hover i, .tech-card:hover h6 {
+        color: var(--high-contrast-text);
+        transition: 400ms;
+        scale: 1.1;
+    }
+}

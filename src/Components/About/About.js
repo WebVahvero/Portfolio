@@ -64,7 +64,5 @@ export default function About() {
 
     aboutSection.append(aboutTitle, experienceDiv);
 
-    console.log(data.education[0])
-
     return aboutSection;
 }

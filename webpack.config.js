@@ -1,6 +1,7 @@
 const path = require('path');
 const json5 = require('json5');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackInjector = require('html-webpack-injector');
 
 module.exports = {
     mode: 'development',
@@ -12,6 +13,7 @@ module.exports = {
         new HtmlWebpackPlugin({
           title: 'Portfolio Valtteri Kurunsaari',
         }),
+        new HtmlWebpackInjector()
     ],
     output: {
         filename: '[name].[contenthash].js',

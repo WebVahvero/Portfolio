@@ -1,18 +1,52 @@
 {
     "projects": [
         {
-            "name": "Project 1",
-            "link": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON",
-            "tools": ["HTML5", "CSS3", "JavaScript"],
-            "created": "November 2022",
-            "updated": "January 2023"
+            "name": "Library",
+            "link": "https://github.com/WebVahvero/Library",
+            "tools": ["html5", "css3-alt", "js"],
+            "description": "Library application where you can list your books what you have read or are going to read",
+            "created": "September 2022",
+            "updated": "September 2022"
         },
         {
-            "name": "Project 2",
-            "link": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON",
-            "tools": ["React", "SCSS", "JavaScript"],
-            "created": "June 2022",
-            "updated": "December 2022"
+            "name": "Space News",
+            "link": "https://github.com/WebVahvero/space-news",
+            "tools": ["react", "sass", "js"],
+            "description": "Space news website showcases news from space, data is pulled to website from Nasa API",
+            "created": "July 2022",
+            "updated": "July 2022"
+        },
+        {
+            "name": "Rock, Paper & Scissors",
+            "link": "https://github.com/WebVahvero/rock-paper-scissors",
+            "tools": ["html5", "css3-alt", "js"],
+            "description": "The popular game of Rock, Paper, and Scissors is now available to play online!",
+            "created": "August 2022",
+            "updated": "August 2022"
+        },
+        {
+            "name": "ETCH A SKETCH",
+            "link": "https://github.com/WebVahvero/Etch-A-Sketch",
+            "tools": ["html5", "css3-alt", "js"],
+            "description": "Eatch a Sketch is a website designed for creating pixel art. Unfortunately, there is no option to save your artwork other than through taking a screenshot.",
+            "created": "August 2022",
+            "updated": "August 2022"
+        },
+        {
+            "name": "TerveysCheck",
+            "link": "https://github.com/WebVahvero/TerveysCheck",
+            "tools": ["html5", "css3-alt", "js"],
+            "description": "A website where you can enter your weight, height, waist circumference, age and activity. As a result, you will receive a health assessment and recommendations.",
+            "created": "February 2022",
+            "updated": "February 2022"
+        },
+        {
+            "name": "Portfolio",
+            "link": "https://github.com/WebVahvero/TerveysCheck",
+            "tools": ["html5", "css3-alt", "js"],
+            "description": "My own portfolio website which you are currently reading.",
+            "created": "December 2023",
+            "updated": "December 2023"
         }
     ],
     "education": [
@@ -26,7 +60,7 @@
         {
             "school": "Vaasa University of Applied Sciences",
             "degree": "Bachelor of Information Technology",
-            "description": "Prepares students for jobs in the food service industry, such as chefs and other kitchen staff.",
+            "description": "Prepares students for jobs in the information technology industry, such as IT specialists and developer roles.",
             "startDate": "September 2019",
             "endDate": "February 2023"
         }
