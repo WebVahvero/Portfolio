@@ -30,3 +30,14 @@
         scale: 1.1;
     }
 }
+
+@media only screen and (max-width: 810px) {
+
+    #tech-banner {
+        flex-wrap: wrap;
+
+        .tech-card {
+            margin: 5px;
+        }
+    }
+}
